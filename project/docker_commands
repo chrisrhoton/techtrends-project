@@ -1,11 +1,41 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+## I ran this in project directory (i.e. same directory as the Dockerfile)
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker logs cadb5deb1b5c
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+INFO:werkzeug - - [2022-06-04 15:16:15,973]  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:3111
+ * Running on http://172.17.0.2:3111 (Press CTRL+C to quit)
+INFO:werkzeug - - [2022-06-04 15:16:46,817] 172.17.0.1 - - [04/Jun/2022 15:16:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:16:46,915] 172.17.0.1 - - [04/Jun/2022 15:16:46] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:16:50,767] 172.17.0.1 - - [04/Jun/2022 15:16:50] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app - - [2022-06-04 15:21:39,036] Article "2020 CNCF Annual Report" retreived
+INFO:werkzeug - - [2022-06-04 15:21:39,044] 172.17.0.1 - - [04/Jun/2022 15:21:39] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:21:39,133] 172.17.0.1 - - [04/Jun/2022 15:21:39] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug - - [2022-06-04 15:21:40,699] 172.17.0.1 - - [04/Jun/2022 15:21:40] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:21:40,766] 172.17.0.1 - - [04/Jun/2022 15:21:40] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app - - [2022-06-04 15:21:55,169] Article "My New Post" created
+INFO:werkzeug - - [2022-06-04 15:21:55,170] 172.17.0.1 - - [04/Jun/2022 15:21:55] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug - - [2022-06-04 15:21:55,185] 172.17.0.1 - - [04/Jun/2022 15:21:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:21:55,251] 172.17.0.1 - - [04/Jun/2022 15:21:55] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app - - [2022-06-04 15:21:57,845] About Us retrieved
+INFO:werkzeug - - [2022-06-04 15:21:57,851] 172.17.0.1 - - [04/Jun/2022 15:21:57] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:21:57,909] 172.17.0.1 - - [04/Jun/2022 15:21:57] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug - - [2022-06-04 15:22:01,339] 172.17.0.1 - - [04/Jun/2022 15:22:01] "GET /metrics HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:22:13,918] 172.17.0.1 - - [04/Jun/2022 15:22:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:22:13,990] 172.17.0.1 - - [04/Jun/2022 15:22:13] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app - - [2022-06-04 15:22:15,021] Article "KubeCon + CloudNativeCon 2021" retreived
+INFO:werkzeug - - [2022-06-04 15:22:15,021] 172.17.0.1 - - [04/Jun/2022 15:22:15] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug - - [2022-06-04 15:22:15,068] 172.17.0.1 - - [04/Jun/2022 15:22:15] "GET /static/css/main.css HTTP/1.1" 304 -
