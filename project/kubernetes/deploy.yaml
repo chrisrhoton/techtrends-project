@@ -26,13 +26,13 @@ spec:
         - containerPort: 3111
           protocol: TCP 
         livenessProbe:
-           httpGet:
-             path: /healthz
-             port: 3111
+          httpGet:
+            path: /healthz
+            port: 3111
         readinessProbe:
-           httpGet:
-             path: /healthz
-             port: 3111
+          httpGet:
+            path: /healthz
+            port: 3111
         resources:
           requests:
             memory: "64Mi"
