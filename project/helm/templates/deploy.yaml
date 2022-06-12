@@ -25,6 +25,15 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: techtrends
         ports:
-{{ toYaml .Values.ports | indent 10 }}
+        - containerPort: {{ .Values.ports.containerPort }}
+          protocol: TCP
+          livenessProbe:
+              httpGet:
+                path: {{ .Values.ports.livenessProbe.path }}
+                port: 3111
+          readinessProbe:
+              httpGet:
+                path: {{ .Values.ports.readinessProbe.path }}
+                port: 3111
         resources:
 {{ toYaml .Values.resources | indent 12 }}
